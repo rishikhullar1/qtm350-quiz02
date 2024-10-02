@@ -1,0 +1,19 @@
+---
+title: "Life Expectancy and Population"
+---
+In this page we will explore the relationship between life expectancy and popilation.
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+gapminder = pd.read_csv('gapminder.csv')
+
+plt.scatter(data=gapminder, x='population_millions',y='life_expectancy')
+plt.xlabel('Population (millions)')
+plt.ylabel('Life Expectancy (Years)')
+plt.title('Population vs Life Expectancy')
+plt.show()
+```
+
+The graph shows that most populations are between 0-200 million people. There is not a strong relationship between population and life expectancy in this range as there are countries with similar populations but completely varied life expectancies. We can see, however, that as the population surpasses 400 million the life expectancy of the country steadily increases.
